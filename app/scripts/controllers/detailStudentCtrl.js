@@ -19,5 +19,5 @@ angular.module('studentApp')
         $location.path('/');
       };
 
-      $scope.user = StudentFactory.show({id: $routeParams.id});
+      $scope.student = StudentFactory.show({id: $routeParams.id});
     }]);
