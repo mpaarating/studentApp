@@ -7,20 +7,11 @@
  * Controller of the studentApp
  */
 angular.module('studentApp')
-  .controller('DetailStudentCtrl', ['$scope', '$routeParams', '$location',
-    function ($scope, $routeParams, $location) {
-      $http.get('data/test-data.json').
-          success(function(data, status, headers, config) {
-            $scope.students = data;
-            console.log(students);
-          }).
-          error(function(data, status, headers, config) {
-            // log error
-          });
-
+  .controller('DetailStudentCtrl', ['$scope', '$routeParams', 'StudentFactory', '$location',
+    function ($scope, $routeParams, StudentFactory, $location) {
 
       $scope.updateUser = function () {
-        $http.update($scope.student);
+        StudentFactory.update($scope.student);
         $location.path('/');
       };
 
