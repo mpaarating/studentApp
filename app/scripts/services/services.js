@@ -8,9 +8,9 @@ angular.module('studentApp')
     })
   })
   .factory('StudentFactory', function ($resource) {
-    return $resource('test-data.json:id', {}, {
+    return $resource('test-student.json', {}, {
       show: { method: 'GET' },
-      update: { method: 'PUT', params: {id: '@id'} },
-      delete: { method: 'DELETE', params: {id: '@id'} }
+      update: { method: 'PUT' },
+      delete: { method: 'DELETE' }
     })
   });
