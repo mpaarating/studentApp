@@ -27,7 +27,7 @@ angular
         templateUrl: 'views/add-student.html',
         controller: 'MainCtrl'
       })
-      .when('/detail-student', {
+      .when('/detail-student/:id', {
         templateUrl: 'views/detail-student.html',
         controller: 'DetailStudentCtrl'
       })

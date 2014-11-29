@@ -8,28 +8,22 @@
  * Controller of the studentApp
  */
 angular.module('studentApp')
-  .controller('MainCtrl', ['$scope', '$http', '$location',
-      function ($scope, $http, $location) {
-        $http.get('test-data.json').
-            success(function(data, status, headers, config) {
-              console.log(data);
-              $scope.students = data;
-            }).
-            error(function(data, status, headers, config) {
-              // log error
-            });
+  .controller('MainCtrl', ['$scope', 'StudentsFactory', 'StudentFactory', '$location',
+      function ($scope, StudentsFactory, StudentFactory, $location) {
 
-        /*$scope.editStudent = function (studentId) {
+        $scope.editStudent = function (studentId) {
           $location.path('/detail-student/' + studentId);
         };
 
         $scope.deleteStudent = function (studentId) {
-          studentFactory.delete({ id: studentId });
+          StudentFactory.delete({ id: studentId });
           $scope.students = studentFactory.query();
         };
 
         $scope.createNewStudent = function () {
           $location.path('/add-student');
-        };*/
+        };
+
+        $scope.students = StudentsFactory.query();
 
       }]);

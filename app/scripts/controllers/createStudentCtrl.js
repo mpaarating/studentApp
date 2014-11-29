@@ -13,6 +13,6 @@ angular.module('studentApp')
 
         $scope.createNewStudent = function () {
           StudentsFactory.create($scope.student);
-          $location.path('/');
+          $location.path('/add-student');
         }
       }]);

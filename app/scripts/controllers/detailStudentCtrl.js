@@ -12,7 +12,7 @@ angular.module('studentApp')
 
       $scope.updateUser = function () {
         StudentFactory.update($scope.student);
-        $location.path('/');
+        $location.path('/detail-student');
       };
 
       $scope.cancel = function () {
