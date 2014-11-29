@@ -7,11 +7,11 @@
  * Controller of the studentApp
  */
 angular.module('studentApp')
-  .controller('DetailStudentCtrl', ['$scope', '$routeParams', 'StudentFactory', '$location',
-    function ($scope, $routeParams, StudentFactory, $location) {
+  .controller('DetailStudentCtrl', ['$scope', '$routeParams', 'StudentsFactory', '$location',
+    function ($scope, $routeParams, StudentsFactory, $location) {
 
-      $scope.updateUser = function () {
-        StudentFactory.update($scope.student);
+      $scope.updateStudent = function () {
+        StudentsFactory.update($scope.student);
         $location.path('/detail-student');
       };
 
@@ -19,5 +19,5 @@ angular.module('studentApp')
         $location.path('/');
       };
 
-      $scope.student = StudentFactory.show({id: $routeParams.id});
+      $scope.student = StudentsFactory.show();
     }]);
