@@ -7,12 +7,11 @@
  * Controller of the studentApp
  */
 angular.module('studentApp')
-  .controller('CreateStudentCtrl', ['$scope', 'StudentsFactory', '$location',
-    function ($scope, StudentsFactory, $location) {
-
+  .controller('CreateStudentCtrl', ['$scope', '$http', '$location',
+    function ($scope, $http, $location) {
 
       $scope.createNewStudent = function () {
-        StudentsFactory.create($scope.student);
+        $http.create($scope.student);
         $location.path('/');
       }
     }]);
