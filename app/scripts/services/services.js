@@ -2,8 +2,8 @@
 
 angular.module('studentApp')
   .factory('StudentsFactory', function ($firebase) {
-      var url = new Firebase("https://resplendent-torch-6553.firebaseio.com/students");
-      var fireRef = $firebase(url);
+      var url = "https://resplendent-torch-6553.firebaseio.com/students";
+      var fireRef = new Firebase(url);
 
       var StudentService = {
         url: url,
