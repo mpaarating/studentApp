@@ -1,66 +1,55 @@
 [
   {
-    "id": 0,
     "name": "Barlow Hughes",
     "age": 13,
     "grade": "Senior"
   },
   {
-    "id": 1,
     "name": "Delgado Parker",
     "age": 14,
     "grade": "Junior"
   },
   {
-    "id": 2,
     "name": "Brittany Sykes",
     "age": 15,
     "grade": "Freshman"
   },
   {
-    "id": 3,
     "name": "Cheri Goodman",
     "age": 18,
     "grade": "Freshman"
   },
   {
-    "id": 4,
     "name": "Finley Ramsey",
     "age": 22,
     "grade": "Sophomore"
   },
   {
-    "id": 5,
     "name": "Clemons Kramer",
     "age": 22,
     "grade": "Junior"
   },
   {
-    "id": 6,
     "name": "Winnie House",
     "age": 16,
     "grade": "Junior"
   },
   {
-    "id": 7,
     "name": "Leigh Rodriquez",
     "age": 11,
     "grade": "Freshman"
   },
   {
-    "id": 8,
     "name": "Miller Alexander",
     "age": 22,
     "grade": "Freshman"
   },
   {
-    "id": 9,
     "name": "Christy Colon",
     "age": 19,
     "grade": "Junior"
   },
   {
-    "id": 10,
     "name": "Rivers Chavez",
     "age": 17,
     "grade": "Sophomore"

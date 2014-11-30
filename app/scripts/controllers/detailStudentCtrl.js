@@ -10,8 +10,8 @@ angular.module('studentApp')
   .controller('DetailStudentCtrl', ['$scope', '$routeParams', 'StudentsFactory', '$location',
     function ($scope, $routeParams, StudentsFactory, $location) {
 
-      $scope.updateStudent = function (student) {
-        StudentsFactory.updateStudent(student);
+      $scope.updateStudent = function ($routeParams) {
+        StudentsFactory.updateStudent($routeParams);
         $location.path('/');
       };
 

@@ -6,6 +6,7 @@ angular.module('studentApp')
       var fireRef = new Firebase(url);
       var ref = $firebase(fireRef);
 
+      //Creates object to access Firebase Methods
       var StudentService = {
         url: url,
         fireRef: fireRef,
@@ -14,15 +15,21 @@ angular.module('studentApp')
         createStudent: function (studentData) {
           return StudentService.students.$add(studentData);
         },
+
         getStudent: function (studentId) {
           return StudentService.students.$getRecord(studentId);
         },
+
         deleteStudent: function (studentData) {
           return StudentService.students.$remove(studentData);
         },
+
         updateStudent : function(studentData) {
-          return StudentService.students.$save(studentData);
+          var saveRef = StudentService.students.$keyAt(studentData);
+          console.log(saveRef);
+          return StudentService.students.$save(saveRef);
         }
+
       };
 
       return StudentService;
