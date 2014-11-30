@@ -11,6 +11,9 @@ angular.module('studentApp')
         students: $firebase(fireRef).$asArray(),
         createStudent: function (studentData) {
           StudentService.students.$add(studentData);
+        },
+        deleteStudent: function (studentData) {
+
         }
       };
 
