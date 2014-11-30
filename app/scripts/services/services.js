@@ -10,14 +10,18 @@ angular.module('studentApp')
         url: url,
         fireRef: fireRef,
         students: ref.$asArray(),
+
         createStudent: function (studentData) {
-          StudentService.students.$add(studentData);
+          return StudentService.students.$add(studentData);
         },
         getStudent: function (studentData) {
           return StudentService.students.$getRecord(studentData);
         },
         deleteStudent: function (studentData) {
-
+          return StudentService.students.$remove(studentData);
+        },
+        updateStudent : function(studentData) {
+          return StudentService.students.$save(studentData);
         }
       };
 

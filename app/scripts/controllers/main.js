@@ -15,9 +15,8 @@ angular.module('studentApp')
           $location.path('/detail-student/' + student.$id);
         };
 
-        $scope.deleteStudent = function () {
-          StudentFactory.delete($scope.student);
-          $scope.students = StudentsFactory.query();
+        $scope.deleteStudent = function (student) {
+          StudentsFactory.deleteStudent(student);
         };
 
         $scope.createNewStudent = function () {
