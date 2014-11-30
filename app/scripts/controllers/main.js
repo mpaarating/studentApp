@@ -24,6 +24,4 @@ angular.module('studentApp')
         };
 
         $scope.students = StudentsFactory.students;
-
-
       }]);
