@@ -14,6 +14,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <base href="/">
   </head>
   <body ng-app="studentApp">
     <!--[if lt IE 7]>
@@ -22,10 +23,10 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
+      <div class="header" ng-controller="NavCtrl">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">HOME</a></li>
-          <li><a ng-href="#/add-student">ADD STUDENT</a></li>
+          <li ng-class="{active: isActive('/')}"><a ng-href="/">HOME</a></li>
+          <li ng-class="{active: isActive('/add-student')}"><a ng-href="add-student">ADD STUDENT</a></li>
         </ul>
         <h3 class="text-muted">Student Control</h3>
       </div>
@@ -68,6 +69,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/navCtrl.js"></script>
         <script src="scripts/controllers/detailStudentCtrl.js"></script>
         <script src="scripts/controllers/createStudentCtrl.js"></script>
         <script src="scripts/services/services.js"></script>

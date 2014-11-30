@@ -10,8 +10,6 @@ angular.module('studentApp')
     .controller('CreateStudentCtrl', ['$scope', 'StudentsFactory', '$location',
       function ($scope, StudentsFactory, $location) {
 
-        console.log(StudentsFactory);
-
         $scope.createNewStudent = function () {
           StudentsFactory.createStudent($scope.student);
           $location.path('/');
