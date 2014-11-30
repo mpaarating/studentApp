@@ -3,14 +3,14 @@
 angular.module('studentApp')
     .factory('StudentsFactory', function ($firebase) {
       var url = "https://resplendent-torch-6553.firebaseio.com";
-      var fireRef = new Firebase(url);
-      var ref = $firebase(fireRef);
+      var ref = new Firebase(url);
+      var sync = $firebase(ref);
 
       //Creates object to access Firebase Methods
       var StudentService = {
         url: url,
-        fireRef: fireRef,
-        students: ref.$asArray(),
+        ref: ref,
+        students: sync.$asArray(),
 
         createStudent: function (studentData) {
           return StudentService.students.$add(studentData);
@@ -25,6 +25,7 @@ angular.module('studentApp')
         },
 
         updateStudent : function(studentData) {
+          console.log(studentData);
           var saveRef = StudentService.students.$keyAt(studentData);
           console.log(saveRef);
           return StudentService.students.$save(saveRef);
