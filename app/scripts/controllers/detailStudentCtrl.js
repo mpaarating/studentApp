@@ -19,5 +19,5 @@ angular.module('studentApp')
         $location.path('/');
       };
 
-      $scope.student = StudentsFactory.$getRecord();
+      $scope.student = StudentsFactory.getStudent();
     }]);

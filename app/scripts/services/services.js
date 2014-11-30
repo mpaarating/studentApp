@@ -12,6 +12,9 @@ angular.module('studentApp')
         createStudent: function (studentData) {
           StudentService.students.$add(studentData);
         },
+        getStudent: function (studentData){
+          StudentService.students.$getRecord($id);
+        },
         deleteStudent: function (studentData) {
 
         }
