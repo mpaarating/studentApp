@@ -14,7 +14,7 @@ angular.module('studentApp')
           StudentService.students.$add(studentData);
         },
         getStudent: function (studentData) {
-          return ref.$getRecord($id);
+          return StudentService.students.$getRecord(studentData);
         },
         deleteStudent: function (studentData) {
 
