@@ -15,7 +15,8 @@ angular
     'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngSanitize'
+    'ngSanitize',
+    'firebase'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -25,7 +26,7 @@ angular
       })
       .when('/add-student', {
         templateUrl: 'views/add-student.html',
-        controller: 'MainCtrl'
+        controller: 'CreateStudentCtrl'
       })
       .when('/detail-student/:id', {
         templateUrl: 'views/detail-student.html',

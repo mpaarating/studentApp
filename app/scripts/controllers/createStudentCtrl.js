@@ -12,9 +12,8 @@ angular.module('studentApp')
 
         console.log(StudentsFactory);
 
-
         $scope.createNewStudent = function () {
-          createStudent($scope.student);
+          StudentsFactory.createStudent($scope.student);
           $location.path('/add-student');
         }
       }]);

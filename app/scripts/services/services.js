@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('studentApp', ['firebase'])
+angular.module('studentApp')
   .factory('StudentsFactory', function ($firebase) {
-      var ref = new Firebase("https://resplendent-torch-6553.firebaseio.com/students");
-      var fb = $firebase(ref);
+      var url = new Firebase("https://resplendent-torch-6553.firebaseio.com/students");
+      var fireRef = $firebase(url);
 
       var StudentService = {
         url: url,
