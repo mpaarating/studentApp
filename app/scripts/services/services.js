@@ -8,7 +8,7 @@ angular.module('studentApp')
       var StudentService = {
         url: url,
         fireRef : fireRef,
-        students: $firebase(fireRef),
+        students: $firebase(fireRef).$asArray(),
         createStudent: function (studentData) {
           StudentService.students.$add(studentData);
         }

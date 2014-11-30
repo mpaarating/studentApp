@@ -8,8 +8,8 @@
  * Controller of the studentApp
  */
 angular.module('studentApp')
-  .controller('MainCtrl', ['$scope', 'StudentsFactory', 'StudentFactory', '$location',
-      function ($scope, StudentsFactory, StudentFactory, $location) {
+  .controller('MainCtrl', ['$scope', 'StudentsFactory', '$location',
+      function ($scope, StudentsFactory, $location) {
 
         $scope.editStudent = function (studentId) {
           $location.path('/detail-student/' + studentId);
@@ -17,13 +17,13 @@ angular.module('studentApp')
 
         $scope.deleteStudent = function (studentId) {
           StudentFactory.delete({ id: studentId });
-          $scope.students = studentFactory.query();
+          $scope.students = StudentsFactory.query();
         };
 
         $scope.createNewStudent = function () {
           $location.path('/add-student');
         };
 
-        $scope.students = StudentsFactory.query();
+        $scope.students = StudentsFactory.students;
 
       }]);
