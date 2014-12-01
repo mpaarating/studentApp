@@ -10,7 +10,6 @@
  */
 angular
   .module('studentApp', [
-    'ngResource',
     'ngRoute',
     'firebase'
   ])
