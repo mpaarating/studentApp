@@ -10,12 +10,8 @@
  */
 angular
   .module('studentApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngMessages',
     'ngResource',
     'ngRoute',
-    'ngSanitize',
     'firebase'
   ])
   .config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
