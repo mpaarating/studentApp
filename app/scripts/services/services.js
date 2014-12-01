@@ -25,8 +25,9 @@ angular.module('studentApp')
         },
 
         updateStudent : function(studentData) {
+          
           //Creates reference to student object with the inherited key
-          var studentRef = StudentService.students[studentData];
+          var studentRef = StudentService.students.$indexFor(studentData);
           return StudentService.students.$save(studentRef);
         }
 
